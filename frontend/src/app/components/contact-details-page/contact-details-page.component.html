@@ -1,0 +1,56 @@
+<div class="contact-detail-container">
+    @if (contact)  {
+    <div class="back-to-contacts-page-button-container">
+        <app-common-button label="Back to Contacts Page" directTo="/"></app-common-button>
+        <app-common-button label="Edit" (onSumbit)="makeFormEditable()" [isDisabled]="isNewContact()"></app-common-button>
+        <app-common-button label="Delete" (onSumbit)="deleteContact(contact.id)"></app-common-button>
+
+    </div>
+    
+        <form [formGroup]="contactInfoForm" (ngSubmit)="onSubmit()">
+            <div class="inputs-container" formGroupName="contactData">
+            <div class="first-name-container">
+                <label for="firstNameInput">First Name</label>
+                <input type="text" id="firstNameInput" formControlName="firstName" class="form-control" placeholder="Enter First Name"/>
+            </div>
+            <div class="last-name-container">
+                <label for="lastNameInput">Last Name</label>
+                <input type="text" id="lastNameInput" formControlName="lastName" class="form-control" placeholder="Enter Last Name"/>
+            </div>
+            <div class="email-container">
+                <label for="emailInput">Email</label>
+                <input type="text" id="emailInput" formControlName="email" class="form-control" placeholder="Enter Email"/>
+            </div>
+            <div class="cell-container">
+                <label for="cellInput">Cellphone</label>
+                <input type="text" id="cellInput" formControlName="cell" class="form-control" placeholder="Enter Cellphone"/>
+            </div>
+            <div class="phone-container">
+                <label for="phoneInput">Phone</label>
+                <input type="text" id="phoneInput" formControlName="phone" class="form-control" placeholder="Enter Phone"/>
+            </div>
+            <div class="picture-container">
+                <label for="pictureInput">Image Url</label>
+                <input type="text" id="pictureInput" formControlName="picture" class="form-control" placeholder="Enter Image URL"/>
+            </div>
+            <div class="city-container">
+                <label for="cityInput">City</label>
+                <input type="text" id="cityInput" formControlName="city" class="form-control" placeholder="Enter City"/>
+            </div>
+            <div class="age-container">
+                <label for="ageInput">Age</label>
+                <input type="text" id="ageInput" formControlName="age" class="form-control" placeholder="Enter Age"/>
+            </div>
+            <div class="submit-button-container">
+                <button type="submit" [hidden]="isSubmitButtonDisabled" [disabled]="contactInfoForm.disabled || contactInfoForm.invalid || contactInfoForm.untouched">Submit</button>
+            </div>
+        </div>
+        </form>
+
+    } 
+
+    @else {
+        <h1>No Contact Found</h1>
+    }
+    
+</div>

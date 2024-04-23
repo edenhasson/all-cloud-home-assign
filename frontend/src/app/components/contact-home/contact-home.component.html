@@ -1,0 +1,13 @@
+<div class="contact-home-container">
+    <div class="toolbar">
+        <app-contacts-actions-toolbar></app-contacts-actions-toolbar>
+    </div>
+    @if(contacts$ | async; as contacts) {
+        @for (contact of  contacts; track trackContact) {
+            <contact-card [contact]="contact" [class.is-first]="$first" [class.is-last]="$last"></contact-card>
+        }
+    } 
+    @else {
+        <h1>No Contacts Added yet</h1>
+    }
+</div>

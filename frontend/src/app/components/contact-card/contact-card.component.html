@@ -1,0 +1,9 @@
+<div class="contact-card-container" (click)="routeToDetailsPage()">
+    <div class="profile-picture-container">
+        <img [src]="contact.picture" alt="profile"/>
+    </div>
+    <div class="details-container">
+        <span class="full-name">{{contact.firstName}}</span>
+        <span class="about">{{contact.email}}</span>
+    </div>
+</div>

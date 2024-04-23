@@ -1,0 +1,16 @@
+.contact-home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .is-first {
+        border-top: 2px solid rgba(60, 64, 67, .3);
+        padding-top: 20px;
+    }
+
+    .is-last {
+        border-bottom: 2px solid rgba(60, 64, 67, .3);
+        padding-bottom: 20px;
+    }
+}

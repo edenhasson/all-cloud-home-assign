@@ -1,0 +1,86 @@
+.contact-detail-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .back-to-contacts-page-button-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .app-common-button {
+    margin-right: 10px;
+  }
+  
+  .inputs-container {
+    margin-bottom: 20px;
+  }
+  
+  .contact-detail-container .inputs-container > div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-detail-container label {
+    flex: 0 0 30%;
+    margin-right: 10px;
+  }
+  
+  .form-control {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #555;
+    transition: border-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+  }
+  
+  .submit-button-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button-container button[hidden] {
+    display: none;
+  }
+
+  .submit-button-container button[disabled] {
+    background-color: #cccccc;
+  }
+  
+  .submit-button-container button:hover {
+    background-color: #0056b3;
+  }
+
+  .submit-button-container button:disabled:hover {
+    background-color: #cccccc; 
+  }
+  
+  .contact-detail-container h1 {
+    font-size: 24px;
+    color: #555;
+    text-align: center;
+  }
+  
